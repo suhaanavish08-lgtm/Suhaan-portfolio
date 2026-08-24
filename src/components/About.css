@@ -1,0 +1,101 @@
+/* ===== About Section ===== */
+.about__grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: var(--space-12);
+  align-items: start;
+}
+
+.about__paragraph {
+  color: var(--text-secondary);
+  line-height: var(--lh-relaxed);
+  font-size: var(--fs-base);
+}
+
+.about__paragraph + .about__paragraph {
+  margin-top: var(--space-4);
+}
+
+/* Info panel */
+.about__info {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  padding: var(--space-6);
+  background: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  position: relative;
+}
+
+.about__info-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  transition: background var(--transition-fast);
+}
+
+.about__info-item:hover {
+  background: var(--bg-elevated);
+}
+
+.about__info-icon {
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background: var(--accent-glow);
+  color: var(--accent-light);
+  flex-shrink: 0;
+}
+
+.about__info-label {
+  display: block;
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  text-transform: uppercase;
+  letter-spacing: var(--ls-wide);
+  font-weight: var(--fw-medium);
+  margin-bottom: 2px;
+}
+
+.about__info-value {
+  display: block;
+  font-size: var(--fs-sm);
+  color: var(--text-primary);
+  font-weight: var(--fw-medium);
+}
+
+/* Decorative element */
+.about__decoration {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--space-2);
+  padding: var(--space-3);
+  margin-top: var(--space-2);
+  font-family: 'SF Mono', 'Fira Code', monospace;
+  font-size: var(--fs-xl);
+}
+
+.about__decoration-bracket {
+  color: var(--accent);
+  font-weight: var(--fw-bold);
+}
+
+.about__decoration-dots {
+  color: var(--text-tertiary);
+  letter-spacing: 0.15em;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-8);
+  }
+}
