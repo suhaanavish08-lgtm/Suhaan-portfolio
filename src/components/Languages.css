@@ -1,35 +1,22 @@
-/* ===== Languages Section ===== */
 .languages__list {
   display: flex;
-  gap: var(--space-3);
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+  flex-wrap: wrap;
 }
 
-.language-item {
-  display: inline-flex;
+.languages__item {
+  display: flex;
   align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-3) var(--space-6);
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  font-size: var(--fs-base);
+  gap: var(--space-md);
+  padding: var(--space-lg) var(--space-xl);
+}
+
+.languages__icon {
+  color: var(--accent-primary);
+}
+
+.languages__name {
+  font-size: var(--fs-lg);
   font-weight: var(--fw-medium);
-  color: var(--text-primary);
-  transition: all var(--transition-base);
-}
-
-.language-item:hover {
-  border-color: var(--border-light);
-  background: var(--bg-elevated);
-}
-
-.language-item__icon {
-  color: var(--accent);
-  flex-shrink: 0;
-}
-
-@media (max-width: 480px) {
-  .languages__list {
-    flex-direction: column;
-  }
 }

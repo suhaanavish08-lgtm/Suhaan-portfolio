@@ -1,45 +1,34 @@
-/* ===== Interests Section ===== */
 .interests__grid {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--space-3);
+  gap: var(--space-sm);
+  margin-top: var(--space-xl);
 }
 
-.interest-item {
-  display: inline-flex;
-  align-items: center;
-  gap: var(--space-3);
-  padding: var(--space-3) var(--space-5);
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  border-radius: var(--radius-md);
-  transition: all var(--transition-base);
-  cursor: default;
+.interests__tag {
+  padding: var(--space-md) var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  cursor: pointer;
+  text-align: left;
 }
 
-.interest-item:hover {
-  border-color: var(--border-accent);
-  background: var(--accent-glow);
-  transform: translateY(-2px);
+.interests__tag--active {
+  border-color: var(--accent-primary);
+  background: var(--accent-primary-dim);
 }
 
-.interest-item__icon {
-  color: var(--accent);
-  flex-shrink: 0;
-  transition: color var(--transition-fast);
-}
-
-.interest-item:hover .interest-item__icon {
-  color: var(--accent-light);
-}
-
-.interest-item__label {
+.interests__tag-name {
   font-size: var(--fs-sm);
   font-weight: var(--fw-medium);
-  color: var(--text-secondary);
-  transition: color var(--transition-fast);
+  color: var(--text-primary);
 }
 
-.interest-item:hover .interest-item__label {
-  color: var(--text-primary);
+.interests__tag-desc {
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  font-style: italic;
+  overflow: hidden;
+  display: block;
 }

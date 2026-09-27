@@ -1,0 +1,129 @@
+.boot-screen {
+  position: fixed;
+  inset: 0;
+  z-index: var(--z-boot);
+  background: var(--bg-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.boot-scanline {
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    transparent,
+    transparent 2px,
+    rgba(255, 255, 255, 0.015) 2px,
+    rgba(255, 255, 255, 0.015) 4px
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+.boot-content {
+  position: relative;
+  z-index: 3;
+  max-width: 600px;
+  width: 90%;
+}
+
+.boot-terminal {
+  font-family: var(--font-mono);
+  font-size: var(--fs-sm);
+  line-height: 1.8;
+}
+
+.boot-line {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  color: var(--text-secondary);
+}
+
+.boot-line--empty {
+  height: 1.8em;
+}
+
+.boot-line--title {
+  color: var(--accent-primary);
+  font-weight: var(--fw-bold);
+  font-size: var(--fs-base);
+  margin-bottom: var(--space-sm);
+}
+
+.boot-line--status {
+  color: var(--accent-primary);
+  font-weight: var(--fw-semibold);
+  margin-top: var(--space-xs);
+}
+
+.boot-prompt {
+  color: var(--accent-primary);
+  opacity: 0.6;
+  user-select: none;
+}
+
+.boot-text {
+  flex: 1;
+}
+
+.boot-check {
+  color: var(--status-online);
+  font-size: var(--fs-xs);
+}
+
+.boot-cursor {
+  display: inline-block;
+  color: var(--accent-primary);
+  animation: blink 1s step-end infinite;
+  margin-top: var(--space-xs);
+}
+
+.boot-ready {
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  margin-top: var(--space-2xl);
+  text-align: center;
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+.boot-skip {
+  position: fixed;
+  bottom: var(--space-xl);
+  right: var(--space-xl);
+  z-index: 4;
+  font-family: var(--font-mono);
+  font-size: var(--fs-xs);
+  color: var(--text-tertiary);
+  letter-spacing: var(--ls-wider);
+  padding: var(--space-sm) var(--space-md);
+  border: 1px solid var(--border-primary);
+  border-radius: var(--radius-sm);
+  transition: color var(--duration-fast), border-color var(--duration-fast);
+}
+
+.boot-skip:hover {
+  color: var(--accent-primary);
+  border-color: var(--accent-primary);
+}
+
+.boot-click-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 1;
+  cursor: pointer;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 0.5; }
+  50% { opacity: 1; }
+}

@@ -1,0 +1,39 @@
+.whyhire__header {
+  text-align: center;
+  margin-bottom: var(--space-2xl);
+}
+
+.whyhire__subtitle {
+  font-size: var(--fs-xl);
+  color: var(--text-tertiary);
+  font-style: italic;
+  margin-top: var(--space-sm);
+}
+
+.whyhire__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--space-md);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.whyhire__card {
+  padding: var(--space-xl);
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  cursor: default;
+}
+
+.whyhire__card-icon {
+  font-size: var(--fs-lg);
+  color: var(--accent-primary);
+  flex-shrink: 0;
+}
+
+.whyhire__card-text {
+  font-size: var(--fs-base);
+  font-weight: var(--fw-medium);
+  color: var(--text-secondary);
+}
